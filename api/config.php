@@ -14,13 +14,13 @@ if ($_SERVER ['REQUEST_METHOD'] === 'OPTIONS') {
 
 // Configuración de la base de datos.
 $host = "localhost";
-$dbname = "schema"; 
+$dbname = "utrebytes"; 
 $user = "root";
 $password = "";
 
 // Conexión PDO.
 try {
-    $dsn = "mysql: host = $host; dbname = $dbname; charset = utf8mb4";
+    $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
     $pdo = new PDO ($dsn, $user, $password, [
         PDO:: ATTR_ERRMODE => PDO:: ERRMODE_EXCEPTION,
         PDO:: ATTR_DEFAULT_FETCH_MODE => PDO:: FETCH_ASSOC
