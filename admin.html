@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>UTREBYTES | Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+    <link href = "https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel = "stylesheet">
+</head>
+
+<body class="admin">
+
+    <header>
+        <h1>Gestión de Solicitudes</h1>
+        <a href="index.html" class="volver">← Volver al catálogo</a>
+    </header>
+
+    <main>
+        <div class="admin-panel">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Servicio</th>
+                        <th>Empresa</th>
+                        <th>Prioridad</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaSolicitudes">
+                    <!-- JS. -->
+                </tbody>
+            </table>
+
+            <p id="mensajeAdmin"></p>
+
+        </div>
+    </main>
+
+    <script src="js/admin.js"></script>
+
+</body>
+</html>
