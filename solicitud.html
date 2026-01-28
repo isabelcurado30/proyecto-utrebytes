@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <meta charset = "UTF-8">
+        <title>UTREBYTES | Solicitar Servicio</title>
+        <link rel = "stylesheet" href = "css/solicitud.css">
+        <link rel = "preconnect" href = "https://fonts.googleapis.com">
+        <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+        <link href = "https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel = "stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Solicitud de Servicio</h1>
+        </header>
+
+        <main>
+            <form id = "formSolicitud" class = "form-container">
+                <label>
+                    Servicio
+                    <select id = "servicio" required></select>
+                </label>
+
+                <label>
+                    Empresa / Cliente
+                    <input type = "text" id = "empresa" required>
+                </label>
+
+                <label>
+                    Email
+                    <input type = "email" id = "email" required>
+                </label>
+
+                <label>
+                    Teléfono
+                    <input
+                        type="tel"
+                        id="telefono"
+                        required
+                        maxlength="9"
+                        pattern="[0-9]{9}"
+                        placeholder="Ej: 600123456"
+                    >
+                </label>
+
+                <label>
+                    Descripción
+                    <textarea id = "descripcion" required></textarea>
+                </label>
+
+                <label>
+                    Prioridad
+                    <select id = "prioridad" required>
+                        <option value = "baja">Baja</option>
+                        <option value = "Media">Media</option>
+                        <option value = "alta">Alta</option>
+                    </select>
+                </label>
+
+                <button type = "submit">Enviar Solicitud</button>
+
+                <a href="admin.html" class="ver-solicitudes">
+                    Ver Todas las Solicitudes
+                </a>
+
+            </form>
+
+            <p id = "mensaje"></p>
+        </main>
+
+        <script src = "js/solicitud.js"></script>
+    </body>
+</html>
