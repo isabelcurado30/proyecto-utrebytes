@@ -1,6 +1,23 @@
 const container = document.getElementById ('servicios');
 
-fetch ('http://localhost/proyecto-utre/api/servicios.php')
+function obtenerIcono(categoria) {
+    switch (categoria) {
+        case 'Desarrollo Web':
+            return '💻';
+        case 'IA':
+            return '🤖';
+        case 'Ciberseguridad':
+            return '🔐';
+        case 'Cloud':
+            return '☁️';
+        case 'Consultoría':
+            return '📊';
+        default:
+            return '🛠️';
+    }
+}
+
+fetch ('http://localhost/proyecto-utrebytes/api/servicios.php')
     . then (response => response.json())
     . then (data => {
         data.forEach (servicio => {
@@ -8,6 +25,7 @@ fetch ('http://localhost/proyecto-utre/api/servicios.php')
             card.classList.add ('card');
 
             card.innerHTML = `
+                <div class="icono">${obtenerIcono(servicio.categoria)}</div>
                 <span>${servicio.categoria}</span>
                 <h3>${servicio.nombre}</h3>
                 <p>${servicio.descripcion}</p>
